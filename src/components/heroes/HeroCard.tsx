@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom"
-import { Publisher } from "../../models/Publisher"
+import { Hero } from "../../models/Hero"
 
 interface props {
-    hero:Publisher
+    hero:Hero
 }
 
 export const HeroCard = ( {hero}: props ) => {

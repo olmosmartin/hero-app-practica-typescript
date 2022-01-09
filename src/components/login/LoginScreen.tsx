@@ -1,13 +1,24 @@
+import { useContext } from "react";
 import { useHistory } from "react-router-dom";
-
-
+import { AuthContext } from "../../auth/AuthContext";
+import { types } from "../../types/types"
 
 export const LoginScreen = () => {
     const history = useHistory()
     
+    const { dispatch } = useContext(AuthContext);
+
     const handleOnClick = () => {
+        dispatch({
+            type: types.login,
+            payload: {
+                user:'Martin'
+            }
+        })
+        
         // replace es para que no quede en el stack de navegacion?
         history.replace('/');
+        
     }
 
     return (

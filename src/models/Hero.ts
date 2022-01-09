@@ -1,4 +1,4 @@
-export interface Publisher {
+export interface Hero {
     id: string,
     superhero:string, 
     publisher:string, 
