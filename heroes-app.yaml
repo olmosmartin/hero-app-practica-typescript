@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: heroes-deployment
+spec:
+  selector:
+    matchLabels:
+      app: heroes
+  template:
+    metadata:
+      labels:
+        app: heroes
+    spec:
+      containers:
+      - name: heroes
+        image: heroes:0.0.1
+        resources:
+          limits:
+            memory: "1024Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 3000
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: heroes-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: heroes
+  ports:
+  - port: 3000
+    targetPort: 3000
