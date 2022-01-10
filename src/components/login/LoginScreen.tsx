@@ -9,6 +9,9 @@ export const LoginScreen = () => {
     const { dispatch } = useContext(AuthContext);
 
     const handleOnClick = () => {
+
+        const lastPath = localStorage.getItem('lastPath') || '/'
+
         dispatch({
             type: types.login,
             payload: {
@@ -17,7 +20,7 @@ export const LoginScreen = () => {
         })
         
         // replace es para que no quede en el stack de navegacion?
-        history.replace('/');
+        history.replace(lastPath);
         
     }
 
