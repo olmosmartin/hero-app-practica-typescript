@@ -1,11 +1,12 @@
 import { useContext } from "react";
 import {
-    BrowserRouter as Router, Route, Switch,
+    BrowserRouter as Router, Switch,
 } from "react-router-dom";
 import { AuthContext } from "../auth/AuthContext";
 import { LoginScreen } from "../components/login/LoginScreen";
 import { DashboardRoutes } from "./DashboardRoutes";
 import { PrivateRoute } from "./PrivateRoute";
+import { PublicRoute } from "./PublicRoute";
 
 
 export const AppRouter = () => {
@@ -16,7 +17,12 @@ export const AppRouter = () => {
         <Router>
             <div>
                 <Switch>
-                    <Route exact path="/login"> <LoginScreen /> </Route>
+                    <PublicRoute
+                        component={LoginScreen}
+                        isAuthenticated={user.logged}
+                        exact
+                        path="/login"
+                    />
 
                     {/*rutas a las que no se puede entrar si no esta logueado el usuario */}
                     <PrivateRoute 

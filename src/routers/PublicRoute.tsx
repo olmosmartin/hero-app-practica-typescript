@@ -6,19 +6,17 @@ interface props {
     [rest: string]: any
 }
 
-export const PrivateRoute = ({
+export const PublicRoute = ({
     isAuthenticated,
     component: Component,
     ...rest
 }:props) => {
 
-    
-
     return (
         <Route { ...rest }
             component = { (props:any) => (
-                (isAuthenticated)? (<Component {...props} />)
-                : (<Redirect to="/login" />)
+                (!isAuthenticated)? (<Component {...props} />)
+                : (<Redirect to="/" />)
             )}
         />
     )
