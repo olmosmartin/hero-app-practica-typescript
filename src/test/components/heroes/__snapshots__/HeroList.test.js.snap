@@ -1,0 +1,138 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`pruebas en HeroList.tsx debe mostrarse correctamente con el snapshot 1`] = `
+<div
+  className="card-columns animate__animated animate__fadeIn"
+>
+  <HeroCard
+    hero={
+      Object {
+        "alter_ego": "Bruce Wayne",
+        "characters": "Bruce Wayne",
+        "first_appearance": "Detective Comics #27",
+        "id": "dc-batman",
+        "publisher": "DC Comics",
+        "superhero": "Batman",
+      }
+    }
+    key="dc-batman"
+  />
+  <HeroCard
+    hero={
+      Object {
+        "alter_ego": "Kal-El",
+        "characters": "Kal-El",
+        "first_appearance": "Action Comics #1",
+        "id": "dc-superman",
+        "publisher": "DC Comics",
+        "superhero": "Superman",
+      }
+    }
+    key="dc-superman"
+  />
+  <HeroCard
+    hero={
+      Object {
+        "alter_ego": "Jay Garrick",
+        "characters": "Jay Garrick, Barry Allen, Wally West, Bart Allen",
+        "first_appearance": "Flash Comics #1",
+        "id": "dc-flash",
+        "publisher": "DC Comics",
+        "superhero": "Flash",
+      }
+    }
+    key="dc-flash"
+  />
+  <HeroCard
+    hero={
+      Object {
+        "alter_ego": "Alan Scott",
+        "characters": "Alan Scott, Hal Jordan, Guy Gardner, John Stewart, Kyle Raynor, Jade, Sinestro, Simon Baz",
+        "first_appearance": "All-American Comics #16",
+        "id": "dc-green",
+        "publisher": "DC Comics",
+        "superhero": "Green Lantern",
+      }
+    }
+    key="dc-green"
+  />
+  <HeroCard
+    hero={
+      Object {
+        "alter_ego": "Oliver Queen",
+        "characters": "Oliver Queen",
+        "first_appearance": "More Fun Comics #73",
+        "id": "dc-arrow",
+        "publisher": "DC Comics",
+        "superhero": "Green Arrow",
+      }
+    }
+    key="dc-arrow"
+  />
+  <HeroCard
+    hero={
+      Object {
+        "alter_ego": "Princess Diana",
+        "characters": "Princess Diana",
+        "first_appearance": "All Star Comics #8",
+        "id": "dc-wonder",
+        "publisher": "DC Comics",
+        "superhero": "Wonder Woman",
+      }
+    }
+    key="dc-wonder"
+  />
+  <HeroCard
+    hero={
+      Object {
+        "alter_ego": "J'onn J'onzz",
+        "characters": "Martian Manhunter",
+        "first_appearance": "Detective Comics #225",
+        "id": "dc-martian",
+        "publisher": "DC Comics",
+        "superhero": "Martian Manhunter",
+      }
+    }
+    key="dc-martian"
+  />
+  <HeroCard
+    hero={
+      Object {
+        "alter_ego": "Dick Grayson",
+        "characters": "Dick Grayson",
+        "first_appearance": "Detective Comics #38",
+        "id": "dc-robin",
+        "publisher": "DC Comics",
+        "superhero": "Robin/Nightwing",
+      }
+    }
+    key="dc-robin"
+  />
+  <HeroCard
+    hero={
+      Object {
+        "alter_ego": "Dan Garret",
+        "characters": "Dan Garret, Ted Kord, Jaime Reyes",
+        "first_appearance": "Mystery Men Comics #1",
+        "id": "dc-blue",
+        "publisher": "DC Comics",
+        "superhero": "Blue Beetle",
+      }
+    }
+    key="dc-blue"
+  />
+  <HeroCard
+    hero={
+      Object {
+        "alter_ego": "Dinah Drake",
+        "characters": "Dinah Drake, Dinah Lance",
+        "first_appearance": "Flash Comics #86",
+        "id": "dc-black",
+        "publisher": "DC Comics",
+        "superhero": "Black Canary",
+      }
+    }
+    key="dc-black"
+  />
+</div>
+`;

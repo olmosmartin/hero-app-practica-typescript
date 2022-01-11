@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`pruebas en TodoApp.js debe mostrarse correctamente como el snapshop 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "dispatch": [Function],
+      "user": Object {},
+    }
+  }
+>
+  <AppRouter />
+</ContextProvider>
+`;
