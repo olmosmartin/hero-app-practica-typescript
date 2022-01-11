@@ -1,7 +1,7 @@
 import { mount } from "enzyme";
 import '@testing-library/jest-dom';
 import { MemoryRouter } from "react-router-dom";
-import { PrivateRoute } from "../../routers/PrivateRoute";
+import { PublicRoute } from "../../routers/PublicRoute";
 
 
 describe('pruebas en PrivateRoute.js', () => {
@@ -14,12 +14,12 @@ describe('pruebas en PrivateRoute.js', () => {
 
     Storage.prototype.setItem = jest.fn();
 
-    test('debe mostrar el componente si está autenticado y guardar en localstorage', () => {
+    test('No debe mostrar el componente si está autenticado', () => {
 
         //en component le mando una funcion cualquiera que devuelve con componente cualquieraa
         const wrapper = mount( 
             <MemoryRouter>
-                <PrivateRoute 
+                <PublicRoute 
                     isAuthenticated={true}
                     component={()=><span>hola mundo</span>}
                     {...props}
@@ -29,20 +29,17 @@ describe('pruebas en PrivateRoute.js', () => {
 
         //console.log(wrapper.html());
         
-        //si está autenticado el componente que le mande se tiene q mostrar
-        expect(wrapper.find('span').exists()).toBe(true);
-        //use esta linea para saber qué argumentos espera
-        //expect( Storage.prototype.setItem ).toHaveBeenCalledWith({})
-        expect( Storage.prototype.setItem ).toHaveBeenCalledWith('lastPath', '/marvel')
+        //si está autenticado el componente que le mande NO se tiene q mostrar
+        expect(wrapper.find('span').exists()).toBe(false);
         
     })
 
-    test('debe bloquear el componente si no está autenticado', () => {
+    test('NO debe bloquear el componente si no está autenticado', () => {
 
         //en component le mando una funcion cualquiera que devuelve con componente cualquieraa
         const wrapper = mount( 
             <MemoryRouter>
-                <PrivateRoute 
+                <PublicRoute 
                     isAuthenticated={false}
                     component={()=><span>hola mundo</span>}
                     {...props}
@@ -50,7 +47,7 @@ describe('pruebas en PrivateRoute.js', () => {
             </MemoryRouter>
         );
 
-        expect(wrapper.find('span').exists()).toBe(false);
+        expect(wrapper.find('span').exists()).toBe(true);
         
     })
 
