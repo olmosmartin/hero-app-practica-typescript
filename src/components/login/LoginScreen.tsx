@@ -1,40 +1,39 @@
-import { useContext } from "react";
-import { useHistory } from "react-router-dom";
-import { AuthContext } from "../../auth/AuthContext";
-import { types } from "../../types/types"
+import React, { useContext } from 'react';
+import { AuthContext } from '../../auth/AuthContext';
+import { types } from '../../types/types';
 
-export const LoginScreen = () => {
-    const history = useHistory()
-    
-    const { dispatch } = useContext(AuthContext);
+export const LoginScreen = ({ history }:any) => {
 
-    const handleOnClick = () => {
+    const { dispatch } = useContext( AuthContext );
 
-        const lastPath = localStorage.getItem('lastPath') || '/'
+    const handleLogin = () => {
+
+        const lastPath = localStorage.getItem('lastPath') || '/';
 
         dispatch({
             type: types.login,
             payload: {
-                user:'Martin'
+                user: 'Martin'
             }
-        })
-        
-        // replace es para que no quede en el stack de navegacion?
-        history.replace(lastPath);
+        });
+
+        history.replace( lastPath );
         
     }
 
     return (
-        <div className='container mt-5'>
+        <div className="container mt-5">
             <h1>LoginScreen</h1>
             <hr />
 
             <button
-                className='btn btn-primary'
-                onClick={handleOnClick}
+                className="btn btn-primary"
+                onClick={ handleLogin }
             >
                 Login
             </button>
+
         </div>
     )
 }
+
