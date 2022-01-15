@@ -13,13 +13,13 @@ spec:
     spec:
       containers:
       - name: heroes
-        image: heroes:0.0.1
+        image: heroesapp:0.0.1
         resources:
           limits:
             memory: "1024Mi"
             cpu: "500m"
         ports:
-        - containerPort: 3000
+        - containerPort: 80
 
 ---
 
@@ -33,4 +33,4 @@ spec:
     app: heroes
   ports:
   - port: 3000
-    targetPort: 3000
+    targetPort: 80

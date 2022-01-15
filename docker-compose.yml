@@ -1,0 +1,11 @@
+#version del docker compose
+version: '3'
+#creo dos servicios en el docker compose
+services:
+  #servicio de aplicacion
+  react-app:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
